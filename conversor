@@ -1,0 +1,26 @@
+package conversor;
+
+import java.util.Scanner;
+
+public class Monedas {
+	public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+			double tasaDeCambio = 0.050;
+			
+			System.out.println("Bienvenido al conversor de moneda MXN a USD");
+			System.out.print("Introduce la cantidad de pesos mexicanos que quieres convertir a dólares: ");
+			double pesosMexicanos = scanner.nextDouble();
+			
+			double dolares = pesosMexicanos * tasaDeCambio;
+			System.out.println("La cantidad equivalente en dólares es: " + dolares);
+			
+			System.out.println("\nBienvenido al conversor de moneda USD a MXN");
+			System.out.print("Introduce la cantidad de dólares que quieres convertir a pesos mexicanos: ");
+			double dolares2 = scanner.nextDouble();
+			
+			double pesosMexicanos2 = dolares2 / tasaDeCambio;
+			System.out.println("La cantidad equivalente en pesos mexicanos es: " + pesosMexicanos2);
+		}
+    }
+
+}
